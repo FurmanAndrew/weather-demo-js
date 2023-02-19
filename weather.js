@@ -80,7 +80,7 @@ function weatherDet(data) {
   refs.sky.textContent = sky;
   refs.temperature.textContent = temperature;
   refs.iconWeather.src = iconWeather;
-  if (id == 800) {
+  if (iconWeather == 800) {
       iconWeather.src = 'icons/clear.svg';
     } else if (iconWeather >= 200 && iconWeather <= 232) {
       iconWeather.src = 'icons/storm.svg';
