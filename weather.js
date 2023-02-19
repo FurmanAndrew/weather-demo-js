@@ -75,11 +75,11 @@ function onError (err) {
 }
 
 function weatherDet(data) {
-  const { city } = data.sys.id;
+  // const { city } = data.sys.id;
   const { temperature } = data.main.temp;
   const { sky } = data.main;
   const { iconWeather } = data.weather.icon;
-  refs.geolocation.textContent = city;
+  // refs.geolocation.textContent = city;
   refs.sky.textContent = sky;
   refs.temperature.textContent = temperature;
   refs.iconWeather.textContent = iconWeather;
