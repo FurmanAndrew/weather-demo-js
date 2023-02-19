@@ -1,0 +1,19 @@
+{
+    "liveServer.settings.port": 4500,
+    "liveServer.settings.root": "/src",
+    "liveServer.settings.CustomBrowser" : "chrome",
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --incognito --remote-debugging-port=9222",
+    "liveServer.settings.NoBrowser" : false,
+    "liveServer.settings.ignoreFiles" : [
+            ".vscode/**",
+            "**/*.scss",
+            "**/*.sass"
+    ],
+    "liveSassCompile.settings.excludeList": [
+        "/**/node_modules/**",
+        "/.vscode/**"
+    ],
+    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.autoprefix": [">1%", "last 2 versions"]
+
+}
