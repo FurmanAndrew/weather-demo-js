@@ -79,19 +79,19 @@ function weatherDet(data) {
   refs.geolocation.value = city;
   refs.sky.textContent = sky;
   refs.temperature.textContent = temperature;
-  refs.iconWeather.src = iconWeather;
+  refs.iconWeather.use.href = iconWeather;
   if (iconWeather == 800) {
-      iconWeather.src = 'icons/clear.svg';
+      iconWeather.use.href = 'icons/clear.svg';
     } else if (iconWeather >= 200 && iconWeather <= 232) {
-      iconWeather.src = 'icons/storm.svg';
+      iconWeather.use.href = 'icons/storm.svg';
     } else if (iconWeather >= 600 && iconWeather <= 622) {
-      iconWeather.src = 'icons/snow.svg';
+      iconWeather.use.href = 'icons/snow.svg';
     } else if (iconWeather >= 701 && iconWeather <= 781) {
-      iconWeather.src = 'icons/haze.svg';
+      iconWeather.use.href = 'icons/haze.svg';
     } else if (iconWeather >= 801 && iconWeather <= 804) {
-      iconWeather.src = 'icons/cloud.svg';
+      iconWeather.use.href = 'icons/cloud.svg';
     } else if ((iconWeather >= 500 && iconWeather <= 531) || (id >= 300 && id <= 321)) {
-      iconWeather.src = 'icons/rain.svg';
+      iconWeather.use.href = 'icons/rain.svg';
     }
   // console.log(iconWeather);
   return
