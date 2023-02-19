@@ -72,17 +72,27 @@ function onError (err) {
 }
 
 function weatherDet(data) {
-  const city = data.sys.id;
+  const city = data.sys;
   const temperature = data.main.temp;
   const sky = data.weather[0].main;
-  // const { iconWeather } = data.weather.icon;
+  const iconWeather = data.weather[0].id;
   refs.geolocation.value = city;
   refs.sky.textContent = sky;
   refs.temperature.textContent = temperature;
-  // refs.iconWeather = iconWeather;
-  console.log(city);
-  console.log(temperature);
-  console.log(sky);
+  refs.iconWeather.src = iconWeather;
+  if (id == 800) {
+      iconWeather.src = 'icons/clear.svg';
+    } else if (iconWeather >= 200 && iconWeather <= 232) {
+      iconWeather.src = 'icons/storm.svg';
+    } else if (iconWeather >= 600 && iconWeather <= 622) {
+      iconWeather.src = 'icons/snow.svg';
+    } else if (iconWeather >= 701 && iconWeather <= 781) {
+      iconWeather.src = 'icons/haze.svg';
+    } else if (iconWeather >= 801 && iconWeather <= 804) {
+      iconWeather.src = 'icons/cloud.svg';
+    } else if ((iconWeather >= 500 && iconWeather <= 531) || (id >= 300 && id <= 321)) {
+      iconWeather.src = 'icons/rain.svg';
+    }
   // console.log(iconWeather);
   return
 }
