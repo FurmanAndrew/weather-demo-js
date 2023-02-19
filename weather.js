@@ -75,13 +75,13 @@ function weatherDet(data) {
   const { city } = data.sys.id;
   const { temperature } = data.main.temp;
   const { sky } = data.main;
-  const { iconWeather } = data.weather.icon;
+  // const { iconWeather } = data.weather.icon;
   refs.geolocation.textContent = city;
   refs.sky.textContent = sky;
   refs.temperature.textContent = temperature;
-  refs.iconWeather.textContent = iconWeather;
+  // refs.iconWeather = iconWeather;
   console.log(city);
   console.log(temperature);
   console.log(sky);
-  console.log(iconWeather);
+  // console.log(iconWeather);
 }
