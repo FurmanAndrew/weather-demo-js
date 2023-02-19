@@ -59,8 +59,9 @@ console.log(coordinatsUser);
 
 function onSuccess (position) {
     const {latitude, longitude} = position.coords;
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`).then(r=>r.json).then(console.log(r));
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`).then(r=>r.json).then(console.log());
     console.log(latitude);
+    console.log(longitude);
 }
 
 function onError (err) {
