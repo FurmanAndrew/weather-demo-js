@@ -62,7 +62,7 @@ console.log(coordinatsUser);
 
 function onSuccess (position) {
     const {latitude, longitude} = position.coords;
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=164a02a79a239efd4c817829a733c4d8`).then(r => r.json()).then(() => console.log(weatherDet(r))).catch(error => { console.log(error) });
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=164a02a79a239efd4c817829a733c4d8`).then(r => r.json()).then(result => console.log(weatherDet(result))).catch(error => { console.log(error) });
     console.log(latitude);
     console.log(longitude);
 }
