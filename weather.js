@@ -1,7 +1,10 @@
 const refs = {
   weekday: document.querySelector('.weather__weekday'),
   dayYears: document.querySelector('.weather__date'),
-//   clockface: document.querySelector('.js-clockface'),
+  temperature: document.querySelector('.weather__temperature'),
+  sky: document.querySelector('.weather__sky'),
+  geolocation: document.querySelector('.weather__geolocation'),
+  iconWeather: document.querySelector('.weather__icon'),
 };
 
 const data = new Date();
@@ -58,8 +61,11 @@ console.log(coordinatsUser);
 
 
 function onSuccess (position) {
-    const {latitude, longitude} = position.coords;
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`).then(r=>r.json).then(console.log());
+    const {latitude, longitude} = position.coord;
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
+      .then(r => r.json)
+      .then(r => {weatherDet(r)})
+      .catch(error => { console.log(error) });
     console.log(latitude);
     console.log(longitude);
 }
@@ -68,4 +74,13 @@ function onError (err) {
     console.log(err.message)
 }
 
-
+function weatherDet(data) {
+  const { city } = data.sys.id;
+  const { temperature } = data.main.temp;
+  const { sky } = data.main;
+  const { iconWeather } = data.weather.icon;
+  refs.geolocation.textContent = city;
+  refs.sky.textContent = sky;
+  refs.temperature.textContent = temperature;
+  refs.iconWeather.textContent = iconWeather;
+}
