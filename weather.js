@@ -62,7 +62,7 @@ console.log(coordinatsUser);
 
 function onSuccess (position) {
     const {latitude, longitude} = position.coords;
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${API_KEY}`)
       .then(r => r.json)
       .then(r => {weatherDet(r)})
       .catch(error => { console.log(error) });
@@ -75,11 +75,11 @@ function onError (err) {
 }
 
 function weatherDet(data) {
-  // const { city } = data.sys.id;
+  const { city } = data.sys.id;
   const { temperature } = data.main.temp;
   const { sky } = data.main;
   const { iconWeather } = data.weather.icon;
-  // refs.geolocation.textContent = city;
+  refs.geolocation.textContent = city;
   refs.sky.textContent = sky;
   refs.temperature.textContent = temperature;
   refs.iconWeather.textContent = iconWeather;
