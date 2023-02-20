@@ -5,7 +5,7 @@ const refs = {
   sky: document.querySelector('.weather__sky'),
   geolocation: document.querySelector('.weather__geolocation'),
   iconWeather: document.querySelector('.weather__icon'),
-  
+  linkForWeatherSevenDay: document.querySelector('.weather__link'),
 };
 
 const data = new Date();
@@ -97,3 +97,13 @@ function weatherDet(data) {
   // console.log(iconWeather);
   return
 }
+
+const coordinatsForWeatherSevDay = navigator.geolocation.getCurrentPosition(SuccessSearch, onError);
+function SuccessSearch() {
+  const { latitude, longitude } = position.coords;
+  refs.linkForWeatherSevenDay[href] = `https://ad.doubleclick.net/ddm/trackimp/N${latitude}BANNERFEB2023/B${longitude};dc_trk_aid=550106668;dc_trk_cid=186781116;ord=4231978428;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=;gdpr_consent=;ltd=?`;
+
+  // fetch(`https://ad.doubleclick.net/ddm/trackimp/N${latitude}BANNERFEB2023/B${longitude};dc_trk_aid=550106668;dc_trk_cid=186781116;ord=4231978428;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=;gdpr_consent=;ltd=?`)
+}
+
+SuccessSearch()
