@@ -101,7 +101,7 @@ function weatherDet(data) {
 const coordinatsForWeatherSevDay = navigator.geolocation.getCurrentPosition(SuccessSearch, onError);
 function SuccessSearch(position) {
   const { latitude, longitude } = position.coords;
-  refs.linkForWeatherSevenDay[href] = `https://ad.doubleclick.net/ddm/trackimp/N${latitude}BANNERFEB2023/B${longitude};dc_trk_aid=550106668;dc_trk_cid=186781116;ord=4231978428;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=;gdpr_consent=;ltd=?`;
+  refs.linkForWeatherSevenDay.href = `https://ad.doubleclick.net/ddm/trackimp/N${latitude}BANNERFEB2023/B${longitude};dc_trk_aid=550106668;dc_trk_cid=186781116;ord=4231978428;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=;gdpr_consent=;ltd=?`;
 
   // fetch(`https://ad.doubleclick.net/ddm/trackimp/N${latitude}BANNERFEB2023/B${longitude};dc_trk_aid=550106668;dc_trk_cid=186781116;ord=4231978428;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=;gdpr_consent=;ltd=?`)
 }
