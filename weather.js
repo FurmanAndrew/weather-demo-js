@@ -82,17 +82,17 @@ function weatherDet(data) {
   refs.temperature.textContent = temperature;
   // refs.iconWeather = iconWeather;
   if (idWeather == 800) {
-      iconWeather.src = './icons/clear.svg';
+      refs.iconWeather.src = './icons/clear.svg';
     } else if (idWeather >= 200 && idWeather <= 232) {
-      iconWeather.src = './icons/storm.svg';
+      refs.iconWeather.src = './icons/storm.svg';
     } else if (idWeather >= 600 && idWeather <= 622) {
-      iconWeather.src = './icons/snow.svg';
+      refs.iconWeather.src = './icons/snow.svg';
     } else if (idWeather >= 701 && idWeather <= 781) {
-      iconWeather.src = './icons/haze.svg';
+      refs.iconWeather.src = './icons/haze.svg';
     } else if (idWeather >= 801 && idWeather <= 804) {
-      iconWeather.src = './icons/cloud.svg';
+      refs.iconWeather.src = './icons/cloud.svg';
     } else if ((idWeather >= 500 && idWeather <= 531) || (id >= 300 && id <= 321)) {
-      iconWeather.src = './icons/rain.svg';
+      refs.iconWeather.src = './icons/rain.svg';
     }
   // console.log(iconWeather);
   return
