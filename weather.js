@@ -64,6 +64,7 @@ console.log(coordinatsUser);
 function onSuccess (position) {
     const {latitude, longitude} = position.coords;
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=164a02a79a239efd4c817829a733c4d8`).then(r => r.json()).then(result => weatherDet(result)).catch(error => { console.log(error) });
+    refs.linkForWeatherSevenDay.href = `https://ad.doubleclick.net/ddm/trackimp/N${latitude}BANNERFEB2023/B${longitude};dc_trk_aid=550106668;dc_trk_cid=186781116;ord=4231978428;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=;gdpr_consent=;ltd=?`;
     console.log(latitude);
     console.log(longitude);
 }
@@ -97,13 +98,3 @@ function weatherDet(data) {
   // console.log(iconWeather);
   return
 }
-
-const coordinatsForWeatherSevDay = navigator.geolocation.getCurrentPosition(SuccessSearch, onError);
-function SuccessSearch(position) {
-  const { latitude, longitude } = position.coords;
-  refs.linkForWeatherSevenDay.href = `https://ad.doubleclick.net/ddm/trackimp/N${latitude}BANNERFEB2023/B${longitude};dc_trk_aid=550106668;dc_trk_cid=186781116;ord=4231978428;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=;gdpr_consent=;ltd=?`;
-
-  // fetch(`https://ad.doubleclick.net/ddm/trackimp/N${latitude}BANNERFEB2023/B${longitude};dc_trk_aid=550106668;dc_trk_cid=186781116;ord=4231978428;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=;gdpr_consent=;ltd=?`)
-}
-
-SuccessSearch()
