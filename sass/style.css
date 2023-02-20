@@ -83,8 +83,7 @@
   }
 }
 .weather__icon-geolocation {
-  color: #ffffff;
-  background-color: #4440f6;
+  color: currentColor;
   background-position: center;
   position: absolute;
   bottom: 8px;
@@ -109,6 +108,7 @@
   .weather__geolocation {
     max-width: 177px;
     height: 42px;
+    padding-left: 40px;
     font-size: 20px;
   }
 }
