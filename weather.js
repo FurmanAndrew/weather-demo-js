@@ -73,7 +73,7 @@ function onError (err) {
 }
 
 function weatherDet(data) {
-  const city = data;
+  const city = data.name;
   const temperature = Math.floor(data.main.temp);
   const sky = data.weather[0].main;
   const idWeather = data.weather[0].id;
