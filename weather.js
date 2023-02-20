@@ -5,7 +5,7 @@ const refs = {
   sky: document.querySelector('.weather__sky'),
   geolocation: document.querySelector('.weather__geolocation'),
   iconWeather: document.querySelector('.weather__icon'),
-  insertIcon: document.querySelector('.weather__use'),
+  
 };
 
 const data = new Date();
@@ -73,26 +73,26 @@ function onError (err) {
 }
 
 function weatherDet(data) {
-  const city = data.sys;
+  const city = data;
   const temperature = data.main.temp;
   const sky = data.weather[0].main;
-  const iconWeather = data.weather[0].id;
+  const idWeather = data.weather[0].id;
   refs.geolocation.value = city;
   refs.sky.textContent = sky;
   refs.temperature.textContent = temperature;
   // refs.iconWeather = iconWeather;
-  if (iconWeather == 800) {
-      insertIcon[href] = './icons/clear.svg';
-    } else if (iconWeather >= 200 && iconWeather <= 232) {
-      insertIcon[href] = './icons/storm.svg';
-    } else if (iconWeather >= 600 && iconWeather <= 622) {
-      insertIcon[href] = './icons/snow.svg';
-    } else if (iconWeather >= 701 && iconWeather <= 781) {
-      insertIcon[href] = './icons/haze.svg';
-    } else if (iconWeather >= 801 && iconWeather <= 804) {
-      insertIcon[href] = './icons/cloud.svg';
-    } else if ((iconWeather >= 500 && iconWeather <= 531) || (id >= 300 && id <= 321)) {
-      insertIcon[href] = './icons/rain.svg';
+  if (idWeather == 800) {
+      iconWeather.src = './icons/clear.svg';
+    } else if (idWeather >= 200 && idWeather <= 232) {
+      iconWeather.src = './icons/storm.svg';
+    } else if (idWeather >= 600 && idWeather <= 622) {
+      iconWeather.src = './icons/snow.svg';
+    } else if (idWeather >= 701 && idWeather <= 781) {
+      iconWeather.src = './icons/haze.svg';
+    } else if (idWeather >= 801 && idWeather <= 804) {
+      iconWeather.src = './icons/cloud.svg';
+    } else if ((idWeather >= 500 && idWeather <= 531) || (id >= 300 && id <= 321)) {
+      iconWeather.src = './icons/rain.svg';
     }
   // console.log(iconWeather);
   return
