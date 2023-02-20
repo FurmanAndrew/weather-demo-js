@@ -82,11 +82,14 @@ $color-footer-background: #7a7a7a;
     }
 
     &__icon-geolocation {
+        color: $color-background;
+        background-color: $color-button-hover;
+        background-position: center;
         position: absolute;
         bottom: 8px;
         left: 8px;
         @media screen and (min-width: $tablet) {
-            width: 27px;
+            max-width: 27px;
             height: 27px;
         }
     }

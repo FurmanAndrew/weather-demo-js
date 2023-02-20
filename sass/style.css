@@ -83,13 +83,16 @@
   }
 }
 .weather__icon-geolocation {
+  color: #ffffff;
+  background-color: #4440f6;
+  background-position: center;
   position: absolute;
   bottom: 8px;
   left: 8px;
 }
 @media screen and (min-width: 768px) {
   .weather__icon-geolocation {
-    width: 27px;
+    max-width: 27px;
     height: 27px;
   }
 }
@@ -155,7 +158,7 @@
   .weather__button {
     width: 177px;
     height: 42px;
-    padding: 10px 14px;
+    padding: 10px 13px;
   }
 }
 .weather__link {
